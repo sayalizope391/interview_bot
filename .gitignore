@@ -4,3 +4,4 @@
 /mavenHomeManager.xml
 /venv/
 **/__pycache__/*
+staticfiles/

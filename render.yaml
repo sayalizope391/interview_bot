@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: interview_bot
+    env: python
+    branch: main
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn ibot.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: ibot.settings
+      - key: SECRET_KEY
+        value: your-production-secret-key
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: interview-bot-backend.onrender.com
