@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^6xys^y&(7u)ot0(#=mg#^!yd-cn7jkd1+hp&o6a0srnac@dgg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://interview-bot-jfac.onrender.com']
+ALLOWED_HOSTS = ['interview-bot-jfac.onrender.com']
 
 
 # Application definition
