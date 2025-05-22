@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     'core',
     'authentication',
     'rest_framework',
+    'corsheaders',
     
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
 
 ]
 
@@ -85,7 +88,14 @@ WSGI_APPLICATION = 'ibot.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
-#
+
+CORS_ALLOWED_ORIGINS = [
+    "https://nexai-techjar.netlify.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+#pip install whitenoise
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
