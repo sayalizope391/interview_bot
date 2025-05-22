@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-^6xys^y&(7u)ot0(#=mg#^!yd-cn7jkd1+hp&o6a0srnac@dgg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['interview-bot-jfac.onrender.com']
+ALLOWED_HOSTS = ['interview-bot-jfac.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'ibot.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # postgresql://nexai_database_user:Js5uf5sxUBp3YK4FyeEz2CWVJnIAdGmR@dpg-d0narjhr0fns738qnqkg-a/nexai_database
 
+import dj_database_url
+
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(
+        default='postgresql://nexai_database_user:Js5uf5sxUBp3YK4FyeEz2CWVJnIAdGmR@dpg-d0narjhr0fns738qnqkg-a.singapore-postgres.render.com/nexai_database'
+    )
 }
 
 CORS_ALLOWED_ORIGINS = [
