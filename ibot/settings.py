@@ -91,6 +91,8 @@ DATABASES = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://nexai-techjar.netlify.app",
+    "https://interview-bot-jfac.onrender.com",
+    "http://localhost:5174"
 ]
 
 
