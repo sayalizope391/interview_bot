@@ -93,7 +93,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://nexai-techjar.netlify.app",
 ]
 
-CORS_ALLOW_CREDENTIALS = True
+
 #pip install whitenoise
 
 
